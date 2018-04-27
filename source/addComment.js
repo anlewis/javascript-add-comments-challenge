@@ -32,13 +32,15 @@ $(document).ready(function () {
     let comment = $("textarea#comment").val();
     let author = $("input#authorName").val();
 
-    $("ul").append(
-      $("<li/>").text(comment).append(
-        $("<span/>", {
-          class: "author"
-        }).text(author)
+    if (comment !== '') {
+      $("ul").append(
+        $("<li/>").text(comment).append(
+          $("<span/>", {
+            class: "author"
+          }).text(author)
+        )
       )
-    )
+    }
 
     $("form#new_comment").remove();
     $("#new_comment_button").css("display", "inline-block");
