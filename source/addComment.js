@@ -33,11 +33,10 @@ $(document).ready(function () {
     let author = $("input#authorName").val();
 
     $("ul").append(
-      $("<li/>").append(
-        comment
-      , $("<span/>", {
-        class: "author"
-      }, author)
+      $("<li/>").text(comment).append(
+        $("<span/>", {
+          class: "author"
+        }).text(author)
       )
     )
 
